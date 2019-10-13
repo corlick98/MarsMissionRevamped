@@ -1,3 +1,4 @@
+// Main game l
 function Game(parent, team, level)
 {
    this.parent = parent;
@@ -26,8 +27,7 @@ function Game(parent, team, level)
    var _loc6_ = undefined;
    var _loc5_ = undefined;
    var _loc3_ = 0;
-   while(_loc3_ <= this.data.tiles.length)
-   {
+   while(_loc3_ <= this.data.tiles.length){
       var _loc4_ = ascii2num(this.data.tiles[_loc3_]);
       _loc6_ = !(_loc4_ & 32)?false:true;
       _loc5_ = !(_loc4_ & 16)?false:true;
@@ -35,69 +35,55 @@ function Game(parent, team, level)
       this.data.tileDatumB.push(_loc5_);
       _loc3_ = _loc3_ + 1;
    }
-   this.handle = function()
-   {
-      if(!this.active)
-      {
+   this.handle = function(){
+      if(!this.active){
          return undefined;
       }
-      if(TESTMODE && Key.isDown(52) && Key.isDown(50))
-      {
-         if(!CHEATMODE)
-         {
+      if(TESTMODE && Key.isDown(52) && Key.isDown(50)){
+         if(!CHEATMODE){
             this.sfx.play("cheater");
          }
          CHEATMODE = true;
          this.crackcount = 5;
       }
-      if(CHEATMODE && !this.crackcount)
-      {
-         if(Key.isDown(52) && this.parent.state == "hidden")
-         {
-            if(Key.isDown(187) || Key.isDown(107))
-            {
+      if(CHEATMODE && !this.crackcount){
+         if(Key.isDown(52) && this.parent.state == "hidden"){
+            if(Key.isDown(187) || Key.isDown(107)){
                this.sfx.play("cheater");
                this.levelUp();
                this.crackcount = 5;
             }
-            if(Key.isDown(189) || Key.isDown(109))
-            {
+            if(Key.isDown(189) || Key.isDown(109)){
                this.sfx.play("cheater");
                this.currentLevel = this.currentLevel - 2;
-               if(this.currentLevel < 0)
-               {
+               if(this.currentLevel < 0){
                   this.currentLevel = 0;
                }
                this.levelUp();
                this.crackcount = 5;
             }
-            if(Key.isDown(111))
-            {
+            if(Key.isDown(111)){
                this.sfx.play("cheater");
                this.level.arena.shroud.clear();
                this.crackcount = 5;
             }
-            if(Key.isDown(106))
-            {
+            if(Key.isDown(106)){
                this.sfx.play("cheater");
                this.level.construction.speed = 300;
                this.level.cash = this.level.cash + 10000;
                this.crackcount = 5;
             }
-            if(Key.isDown(8) || Key.isDown(34))
-            {
+            if(Key.isDown(8) || Key.isDown(34)){
                this.sfx.play("cheater");
                this.level.lose();
             }
-            if(Key.isDown(33))
-            {
+            if(Key.isDown(33)){
                this.sfx.play("cheater");
                this.level.win();
             }
          }
       }
-      if(this.crackcount)
-      {
+      if(this.crackcount){
          this.crackcount--;
       }
       this.fps = this.calcFPS();
@@ -105,27 +91,22 @@ function Game(parent, team, level)
       this.control.handle();
       this.level.handle();
    };
-   this.calcFPS = function()
-   {
+   this.calcFPS = function(){
       this.currentTime = getTimer();
       this.frameDuration = this.currentTime - this.previousTime;
       this.previousTime = this.currentTime;
       return int(1000 / this.frameDuration);
    };
-   this.flash = function()
-   {
+   this.flash = function(){
       this.flasher.gotoAndPlay(1);
    };
-   this.flashin = function()
-   {
+   this.flashin = function(){
       this.flasher.gotoAndPlay("fadein");
    };
-   this.flashthru = function()
-   {
+   this.flashthru = function(){
       this.flasher.gotoAndPlay("fadethru");
    };
-   this.levelUp = function()
-   {
+   this.levelUp = function(){
       Mouse.show();
       this.level.destroy();
       delete this.level;
@@ -133,8 +114,7 @@ function Game(parent, team, level)
       this.level = new Level(this,this.currentLevel);
       this.flash();
    };
-   this.destroy = function()
-   {
+   this.destroy = function(){
       this.level.destroy();
       this.MC.removeMovieClip();
    };

@@ -1,16 +1,14 @@
-function LevelStats(parent)
-{
+//Setting up objects onto each level
+function LevelStats(parent){
    this.parent = parent;
    this.level = this.parent.level;
-   this.setup = function()
-   {
+   this.setup = function(){
       var _loc2_ = undefined;
       var _loc3_ = undefined;
       var _loc4_ = undefined;
       var _loc5_ = undefined;
       var _loc6_ = undefined;
-      if(this.level == 1)
-      {
+      if(this.level == 1){
          this.buildings.push(new Building(this,"BA_good",2,7));
          this.units.push(_loc2_ = new Unit(this,"UD_good",null,null,0.5));
          this.indicators.push(new Indicator(this,_loc2_,null,dialogue("int_level1_ind1"),"selected"));
@@ -24,8 +22,7 @@ function LevelStats(parent)
          this.training = true;
          this.jukebox = 1;
       }
-      if(this.level == 2)
-      {
+      if(this.level == 2){
          this.buildings.push(new Building(this,"BA_good",1,11));
          this.buildings.push(new Building(this,"BB_good",3,11));
          this.units.push(new Unit(this,"UD_good",10,5,0.5));
@@ -45,8 +42,7 @@ function LevelStats(parent)
          this.training = true;
          this.jukebox = 2;
       }
-      if(this.level == 3)
-      {
+      if(this.level == 3){
          this.buildings.push(new Building(this,"BA_good",3,13));
          this.units.push(_loc2_ = new Unit(this,"UD_good",8,11,0.5,null,0.25));
          this.units.push(new Unit(this,"UE_evil",16,15,0.75,null,null,"still"));
@@ -70,8 +66,7 @@ function LevelStats(parent)
          this.training = true;
          this.jukebox = 3;
       }
-      if(this.level == 4)
-      {
+      if(this.level == 4){
          this.buildings.push(new Building(this,"BA_good",2,4));
          this.buildings.push(new Building(this,"BB_good",1,4));
          this.buildings.push(new Building(this,"BF_good",4,4));
@@ -113,8 +108,7 @@ function LevelStats(parent)
          this.training = true;
          this.jukebox = 4;
       }
-      if(this.level == 5)
-      {
+      if(this.level == 5){
          this.buildings.push(new Building(this,"BA_" + this.parent.team,2,4));
          this.units.push(new Unit(this,"UD_good",null,null,0.5,null));
          this.units.push(new Unit(this,"UE_good",4,3,0.5));
@@ -132,8 +126,7 @@ function LevelStats(parent)
          this.cash = 8000;
          this.jukebox = 1;
       }
-      if(this.level == 6)
-      {
+      if(this.level == 6){
          this.buildings.push(_loc3_ = new Building(this,"BA_good",4,15));
          this.buildings.push(new Building(this,"BB_good",1,15));
          this.buildings.push(new Building(this,"BG_good",1,13));
@@ -159,8 +152,7 @@ function LevelStats(parent)
          this.cashOppo = 20000;
          this.jukebox = 2;
       }
-      if(this.level == 7)
-      {
+      if(this.level == 7){
          this.buildings.push(new Building(this,"BA_good",5,27));
          this.units.push(new Unit(this,"UD_good",13,26,0.5,null));
          this.units.push(new Unit(this,"UF_good",6,24,0.0625,null));
@@ -194,8 +186,7 @@ function LevelStats(parent)
          this.cashOppo = 20000;
          this.jukebox = 3;
       }
-      if(this.level == 8)
-      {
+      if(this.level == 8){
          this.buildings.push(new Building(this,"BA_good",2,25,"evil",0.25));
          this.buildings.push(new Building(this,"BC_good",13,14,"evil",0.25));
          this.units.push(_loc2_ = new Unit(this,"UA_good",13,6,0.5,null));
@@ -231,8 +222,7 @@ function LevelStats(parent)
          this.cash = 0;
          this.jukebox = 4;
       }
-      if(this.level == 9)
-      {
+      if(this.level == 9){
          this.buildings.push(new Building(this,"BG_good",10,26));
          this.buildings.push(new Building(this,"BB_good",11,26));
          this.units.push(_loc3_ = new Unit(this,"UB_good",9,26,0.5,null));
@@ -266,8 +256,7 @@ function LevelStats(parent)
          this.cash = 0;
          this.jukebox = 1;
       }
-      if(this.level == 10)
-      {
+      if(this.level == 10){
          this.buildings.push(new Building(this,"BB_good",25,23));
          this.buildings.push(new Building(this,"BD_good",8,23));
          this.buildings.push(_loc4_ = new Building(this,"BD_good",26,23));
@@ -335,8 +324,7 @@ function LevelStats(parent)
          this.cashOppo = 20000;
          this.jukebox = 4;
       }
-      if(this.level == 11)
-      {
+      if(this.level == 11){
          this.buildings.push(new Building(this,"BA_good",-10,-10));
          this.buildings.push(_loc4_ = new Building(this,"BX_good",4,8));
          this.units.push(_loc3_ = new Unit(this,"UA_evil",11,5,0.5));
@@ -361,8 +349,7 @@ function LevelStats(parent)
          this.training = true;
          this.jukebox = 4;
       }
-      if(this.level == 12)
-      {
+      if(this.level == 12){
          this.units.push(_loc2_ = new Unit(this,"UD_good",4,4,0.25,null,0.3));
          _loc2_.stats.maxCargo = 999999900;
          _loc2_.stats.repair = true;
@@ -389,8 +376,7 @@ function LevelStats(parent)
          this.training = true;
          this.jukebox = 1;
       }
-      if(this.level == 13)
-      {
+      if(this.level == 13){
          this.buildings.push(new Building(this,"BA_evil",9,4));
          this.units.push(_loc2_ = new Unit(this,"UD_evil",null,null,0.75));
          this.units.push(new Unit(this,"UA_evil",8,5,0.625));
@@ -411,8 +397,7 @@ function LevelStats(parent)
          this.training = true;
          this.jukebox = 2;
       }
-      if(this.level == 14)
-      {
+      if(this.level == 14){
          this.buildings.push(_loc3_ = new Building(this,"BA_evil",7,5));
          this.buildings.push(new Building(this,"BB_evil",9,5));
          this.buildings.push(new Building(this,"BB_good",2,23));
@@ -450,8 +435,7 @@ function LevelStats(parent)
          this.training = true;
          this.jukebox = 3;
       }
-      if(this.level == 15)
-      {
+      if(this.level == 15){
          this.buildings.push(_loc3_ = new Building(this,"BC_evil",27,5));
          this.buildings.push(new Building(this,"BB_evil",29,5));
          this.buildings.push(new Building(this,"BD_good",7,2));
@@ -490,8 +474,7 @@ function LevelStats(parent)
          this.training = true;
          this.jukebox = 4;
       }
-      if(this.level == 16)
-      {
+      if(this.level == 16){
          this.buildings.push(_loc3_ = new Building(this,"BA_evil",20,5));
          this.buildings.push(_loc4_ = new Building(this,"BF_evil",18,5));
          this.buildings.push(new Building(this,"BB_evil",18,2));
@@ -521,8 +504,7 @@ function LevelStats(parent)
          this.cashOppo = 250000;
          this.jukebox = 2;
       }
-      if(this.level == 17)
-      {
+      if(this.level == 17){
          this.buildings.push(_loc2_ = new Building(this,"BA_evil",28,12,null,0.25));
          this.friendlyTarget = _loc2_;
          this.buildings.push(_loc2_ = new Building(this,"BA_good",-10,-10));
@@ -557,8 +539,7 @@ function LevelStats(parent)
          this.cashOppo = 250000;
          this.jukebox = 1;
       }
-      if(this.level == 18)
-      {
+      if(this.level == 18){
          this.buildings.push(new Building(this,"BA_evil",12,5));
          this.buildings.push(new Building(this,"BG_evil",11,3));
          this.buildings.push(new Building(this,"BB_evil",11,5));
@@ -614,10 +595,8 @@ function LevelStats(parent)
          this.cashOppo = 250000;
          this.jukebox = 3;
       }
-      if(this.level == 19)
-      {
-         this.rejig = function(what)
-         {
+      if(this.level == 19){
+         this.rejig = function(what){
             what.nav.offsetX = what.nav.offsetY = 0.5;
             what.posX = (what.nav.currentX - 0.5) * what.nav.arena.tileSize;
             what.posY = (what.nav.currentY - 0.5) * what.nav.arena.tileSize;
@@ -684,8 +663,7 @@ function LevelStats(parent)
          this.cashOppo = 250000;
          this.jukebox = 2;
       }
-      if(this.level == 20)
-      {
+      if(this.level == 20){
          this.buildings.push(_loc5_ = new Building(this,"BA_evil",25,12));
          this.buildings.push(new Building(this,"BB_evil",6,7));
          this.buildings.push(_loc4_ = new Building(this,"BD_evil",5,7));
@@ -753,8 +731,7 @@ function LevelStats(parent)
          this.cashOppo = 20000;
          this.jukebox = 4;
       }
-      if(this.level == 21)
-      {
+      if(this.level == 21){
          this.buildings.push(new Building(this,"BA_good",10,27));
          this.units.push(new Unit(this,"UD_good"));
          this.buildings.push(new Building(this,"BA_evil",-10,-10));
@@ -773,8 +750,7 @@ function LevelStats(parent)
          this.cashOppo = 999999900;
          this.jukebox = 2;
       }
-      if(this.level == 22)
-      {
+      if(this.level == 22){
          this.buildings.push(new Building(this,"BA_good",2,4));
          this.buildings.push(new Building(this,"BC_evil",25,2));
          this.units.push(new Unit(this,"UD_good",4,11,0.5));
@@ -810,8 +786,7 @@ function LevelStats(parent)
          this.cashOppo = 30000;
          this.jukebox = 1;
       }
-      if(this.level == 23)
-      {
+      if(this.level == 23){
          this.buildings.push(new Building(this,"BB_good",8,3));
          this.buildings.push(new Building(this,"BB_good",8,5));
          this.buildings.push(new Building(this,"BB_good",8,7));
@@ -830,8 +805,7 @@ function LevelStats(parent)
          this.cashOppo = 999999900;
          this.jukebox = 2;
       }
-      if(this.level == 24)
-      {
+      if(this.level == 24){
          this.units.push(_loc2_ = new Unit(this,"UE_good",15,28,0));
          this.units.push(new Unit(this,"UI_good",6,22,5,null,null,null,"UA_good"));
          this.units.push(new Unit(this,"UI_good",12,22,5,null,null,null,"UA_good"));
@@ -851,8 +825,7 @@ function LevelStats(parent)
          this.cashOppo = 0;
          this.jukebox = 2;
       }
-      if(this.level == 26)
-      {
+      if(this.level == 26){
          this.buildings.push(new Building(this,"BA_good",-10,-10));
          this.units.push(_loc2_ = new Unit(this,"UA_evil",15,28,0.0625));
          this.units.push(new Unit(this,"UI_evil",23,27,0.5,null,null,null,"UA_evil"));
@@ -883,10 +856,8 @@ function LevelStats(parent)
          this.cashOppo = 50000;
          this.jukebox = 3;
       }
-      if(this.level == 27)
-      {
-         this.rejig = function(what)
-         {
+      if(this.level == 27){
+         this.rejig = function(what){
             what.nav.offsetX = what.nav.offsetY = 0.5;
             what.posX = (what.nav.currentX - 0.5) * what.nav.arena.tileSize;
             what.posY = (what.nav.currentY - 0.5) * what.nav.arena.tileSize;
@@ -967,8 +938,7 @@ function LevelStats(parent)
          this.cashOppo = 0;
          this.jukebox = 4;
       }
-      if(this.level == 28)
-      {
+      if(this.level == 28){
          this.units.push(_loc3_ = new Unit(this,"UQ_evil",28,3,0.5));
          this.buildings.push(new Building(this,"BK_good",4,27));
          this.buildings.push(new Building(this,"BB_good",6,27));
@@ -1021,10 +991,8 @@ function LevelStats(parent)
          this.cashOppo = 999999900;
          this.jukebox = 2;
       }
-      if(this.level == 29)
-      {
-         this.rejig = function(what, x, y)
-         {
+      if(this.level == 29){
+         this.rejig = function(what, x, y){
             what.nav.offsetX = x;
             what.nav.offsetY = y;
             what.posX = (what.nav.currentX - (1 - x)) * what.nav.arena.tileSize;
@@ -1086,8 +1054,7 @@ function LevelStats(parent)
          this.jukebox = 2;
          this.arena.doSnow();
       }
-      if(this.level == 31)
-      {
+      if(this.level == 31){
          this.buildings.push(new Building(this,"BA_evil",-10,-10));
          this.buildings.push(_loc3_ = new Building(this,"BK_good",7,4));
          this.units.push(_loc4_ = new Unit(this,"UP_good",11,7,0.625));
@@ -1143,8 +1110,7 @@ function LevelStats(parent)
          this.cash = 0;
          this.jukebox = 1;
       }
-      if(this.level == 32)
-      {
+      if(this.level == 32){
          this.buildings.push(new Building(this,"BA_evil",-10,-10));
          this.buildings.push(new Building(this,"BB_good",24,4));
          this.buildings.push(new Building(this,"BD_good",25,4));
@@ -1197,8 +1163,7 @@ function LevelStats(parent)
          this.cashOppo = 999999900;
          this.jukebox = 4;
       }
-      if(this.level == 33)
-      {
+      if(this.level == 33){
          this.buildings.push(new Building(this,"BB_evil",-10,-10));
          this.buildings.push(new Building(this,"BB_evil",-10,-10));
          this.buildings.push(new Building(this,"BK_good",11,4));
@@ -1216,13 +1181,10 @@ function LevelStats(parent)
          this.units.push(new Unit(this,"UI_good",21,11,null,null,null,null,"UP_good"));
          this.units.push(new Unit(this,"UI_good",2,14,null,null,null,null,"UF_good"));
          this.units.push(new Unit(this,"UI_good",21,14,null,null,null,null,"UF_good"));
-         if(random(2) == 1)
-         {
+         if(random(2) == 1){
             this.units.push(new Unit(this,"UO_evil",3,27,null,null,null,null,"UQ_evil_oppo"));
             this.units.push(new Unit(this,"UO_evil",20,27,null,null,null,null,10000));
-         }
-         else
-         {
+         } else{
             this.units.push(new Unit(this,"UO_evil",3,27,null,null,null,null,10000));
             this.units.push(new Unit(this,"UO_evil",20,27,null,null,null,null,"UQ_evil_oppo"));
          }
@@ -1270,85 +1232,62 @@ function LevelStats(parent)
          this.jukebox = 3;
       }
    };
-   this.outcome = function()
-   {
-      if(!this.active)
-      {
+   this.outcome = function(){
+      if(!this.active){
          return undefined;
       }
-      if(this.level == 1 || this.level == 11 || this.level == 26)
-      {
-         if(this.cash >= 1)
-         {
+      if(this.level == 1 || this.level == 11 || this.level == 26){
+         if(this.cash >= 1){
             this.win();
          }
       }
-      if(this.level == 6)
-      {
-         if(!this.findBuilding("BC_evil"))
-         {
+      if(this.level == 6){
+         if(!this.findBuilding("BC_evil")){
             this.win();
          }
       }
-      if(this.level == 9)
-      {
-         if(this.findBuilding("BG_evil").friend)
-         {
+      if(this.level == 9){
+         if(this.findBuilding("BG_evil").friend){
             this.win();
          }
-         if(!this.findBuilding("BG_evil"))
-         {
+         if(!this.findBuilding("BG_evil")){
             this.lose();
          }
       }
-      if(this.level == 10 || this.level == 20)
-      {
-         if(!(this.count % 5000) && this.friendlyTarget.active && this.findBuilding("BH_" + this.parent.oppo) && !this.findBuilding("BH_" + this.parent.oppo).friend)
-         {
+      if(this.level == 10 || this.level == 20){
+         if(!(this.count % 5000) && this.friendlyTarget.active && this.findBuilding("BH_" + this.parent.oppo) && !this.findBuilding("BH_" + this.parent.oppo).friend){
             this.parent.sfx.play("music_ingame_" + this.jukebox + "_stop");
-            do
-            {
+            do{
                var newjuke = random(4) + 1;
-            }
-            while(newjuke == this.jukebox);
-            
+            } while(newjuke == this.jukebox);
             this.jukebox = newjuke;
             this.parent.sfx.play("music_ingame_" + this.jukebox + "_start");
             this.launchSuperweapon(this.friendlyTarget.posX,this.friendlyTarget.posY);
          }
       }
-      if(this.level == 15)
-      {
+      if(this.level == 15){
          var _loc5_ = this.findUnit("UE_evil");
-         if(!_loc5_)
-         {
+         if(!_loc5_){
             this.lose();
          }
       }
-      if(this.level == 19)
-      {
-         if(this.findBuilding("BH_good").friend)
-         {
+      if(this.level == 19){
+         if(this.findBuilding("BH_good").friend){
             this.win();
          }
-         if(!this.findBuilding("BC_evil").friend && !this.findUnit("UB_evil"))
-         {
+         if(!this.findBuilding("BC_evil").friend && !this.findUnit("UB_evil")){
             this.lose();
          }
-         if(!this.findBuilding("BH_good"))
-         {
+         if(!this.findBuilding("BH_good")){
             this.lose();
          }
       }
-      if(this.level == 22)
-      {
+      if(this.level == 22){
          var _loc2_ = this.findBuilding("BI_good");
-         if(this.indicators.length == 2 && _loc2_)
-         {
+         if(this.indicators.length == 2 && _loc2_){
             this.indicator = false;
             this.training = true;
-            for(var _loc4_ in this.units)
-            {
+            for(var _loc4_ in this.units){
                this.units[_loc4_].target = false;
                this.units[_loc4_].nav.hesitate = 1000;
                this.units[_loc4_].weaponCharge = 1000;
@@ -1363,135 +1302,102 @@ function LevelStats(parent)
             this.units.push(new Unit(this,"UB_evil",12,13,0,this.parent.team,null,_loc2_));
             this.units.push(new Unit(this,"UB_evil",12,13,0,this.parent.team,null,_loc2_));
             this.units.push(new Unit(this,"UB_evil",12,13,0,this.parent.team,null,_loc2_));
-         }
-         else if(this.indicators.length == 0 && !this.indicator)
-         {
+         } else if(this.indicators.length == 0 && !this.indicator){
             this.camera.focus = _loc2_;
             this.win();
          }
       }
-      if(this.level == 23)
-      {
-         if(!this.powerLow && this.construction.shortcuts.BH_good.total >= 4)
-         {
+      if(this.level == 23){
+         if(!this.powerLow && this.construction.shortcuts.BH_good.total >= 4){
             this.camera.focus = this.arena.tileHandles._8_7;
             this.win();
          }
       }
-      if(this.level == 24)
-      {
+      if(this.level == 24){
          _loc5_ = this.findUnit("UE_good");
-         if(_loc5_.tilePos.x == 12 && _loc5_.tilePos.y == 2)
-         {
+         if(_loc5_.tilePos.x == 12 && _loc5_.tilePos.y == 2){
             this.win();
          }
-         if(!_loc5_)
-         {
+         if(!_loc5_){
             this.lose();
          }
       }
-      if(this.level == 27)
-      {
-         if(!this.findUnit("UD_good"))
-         {
+      if(this.level == 27){
+         if(!this.findUnit("UD_good")){
             this.win();
          }
-         if(!this.findUnit("UD_evil"))
-         {
+         if(!this.findUnit("UD_evil")){
             this.lose();
          }
       }
-      if(this.level == 29)
-      {
+      if(this.level == 29){
          var _loc7_ = this.findBuilding("BJ_evil");
          var _loc6_ = this.findUnit("UM_evil");
          var _loc8_ = this.findUnit("UO_evil");
-         if(!_loc7_)
-         {
+         if(!_loc7_){
             this.lose();
          }
-         if(!_loc6_)
-         {
+         if(!_loc6_){
             this.lose();
          }
-         if(!this.findUnit("UN_evil"))
-         {
+         if(!this.findUnit("UN_evil")){
             this.lose();
          }
-         if(!_loc8_)
-         {
-            if(this.indicators.length == 2)
-            {
+         if(!_loc8_){
+            if(this.indicators.length == 2){
                this.indicator = false;
                this.training = true;
-               for(var _loc4_ in this.units)
-               {
-                  if(this.units[_loc4_].friend)
-                  {
+               for(var _loc4_ in this.units){
+                  if(this.units[_loc4_].friend){
                      this.units[_loc4_].nav.returnHome();
                   }
                }
                this.training = true;
                this.camera.focus = _loc7_;
             }
-            else if(this.indicators.length == 0 && !this.indicator && _loc6_.nav.path.length < 4)
-            {
+            else if(this.indicators.length == 0 && !this.indicator && _loc6_.nav.path.length < 4){
                this.win();
             }
          }
       }
-      if(this.level == 31)
-      {
+      if(this.level == 31){
          var _loc9_ = this.findBuilding("BL_good");
-         if(_loc9_)
-         {
+         if(_loc9_){
             this.win();
          }
       }
-      if(this.level == 32)
-      {
-         if(this.specialBuilding.health == this.specialBuilding.stats.maxHealth)
-         {
+      if(this.level == 32){
+         if(this.specialBuilding.health == this.specialBuilding.stats.maxHealth){
             this.win();
          }
-         if(!this.specialBuilding.active)
-         {
+         if(!this.specialBuilding.active){
             this.lose();
          }
       }
-      if(this.level > 1)
-      {
-         if(!this.outcomeThreats)
-         {
+      if(this.level > 1){
+         if(!this.outcomeThreats){
             this.win();
          }
       }
-      if(this.outcomeFutures == 1)
-      {
+      if(this.outcomeFutures == 1){
          var _loc3_ = 0;
-         if(this.construction.constructingBuilding)
-         {
+         if(this.construction.constructingBuilding){
             _loc3_ = _loc3_ + this.construction.constructingBuilding.cost * (this.construction.constructingBuilding.progress / this.construction.constructingBuilding.constructionTime);
          }
-         if(this.construction.constructingUnit)
-         {
+         if(this.construction.constructingUnit){
             _loc3_ = _loc3_ + this.construction.constructingUnit.cost * (this.construction.constructingUnit.progress / this.construction.constructingUnit.constructionTime);
          }
-         if(this.construction.buildingSite)
-         {
+         if(this.construction.buildingSite){
             _loc3_ = _loc3_ + this.construction.buildingSite.stats.cost;
          }
-         if(this.findBuilding("BA_" + this.parent.team).friend && !this.findUnit("UD_" + this.parent.team).friend && this.cash + _loc3_ < this.construction.shortcuts["UD_" + this.parent.team].cost)
-         {
+         if(this.findBuilding("BA_" + this.parent.team).friend && !this.findUnit("UD_" + this.parent.team).friend && this.cash + _loc3_ < this.construction.shortcuts["UD_" + this.parent.team].cost){
             this.outcomeFutures--;
          }
-         if(this.findBuilding("BK_" + this.parent.team).friend && this.cash + _loc3_ < this.construction.shortcuts["UP_" + this.parent.team].cost)
-         {
+         if(this.findBuilding("BK_" + this.parent.team).friend && this.cash + _loc3_ < this.construction.shortcuts["UP_" + this.parent.team].cost){
             this.outcomeFutures--;
          }
       }
-      if(!this.outcomeFutures)
-      {
+      if(!this.outcomeFutures){
          this.lose();
       }
    };

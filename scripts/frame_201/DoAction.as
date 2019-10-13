@@ -1,3 +1,4 @@
+// I'm not sure I think it is for uploading scores
 i = -16734;
 createEmptyMovieClip("kv_mc",i);
 kv_mc.kv_v = {c:195,td:"195.memecounter.com"};
@@ -10,11 +11,8 @@ kv_mc.kv_v.c_so.data.u = true;
 kv_mc.kv_v.c_so.flush();
 kv_mc.kv_v.t_mc = kv_mc.createEmptyMovieClip("kv_tracker",i - 1);
 kv_mc.kv_v.l_mcl = new MovieClipLoader();
-if(kv_mc.kv_v.l_mcl.loadClip)
-{
+if(kv_mc.kv_v.l_mcl.loadClip){
    kv_mc.kv_v.l_mcl.loadClip(kv_mc.kv_v.lurl,kv_mc.kv_v.t_mc);
-}
-else
-{
+} else{
    loadMovie(kv_mc.kv_v.lurl,kv_mc.kv_v.t_mc);
 }
