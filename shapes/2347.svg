@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="200.0px" width="200.0px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)">
+    <pattern height="200" id="PatternID_2347_1" overflow="visible" patternTransform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)" patternUnits="userSpaceOnUse" viewBox="0 0 200 200" width="200">
+      <image height="200" width="200" xlink:href="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAB5klEQVR42u3d0YrDIBBAUf//p+17oSUmamaccyBPuwXbzcVMGtjWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABjQvw7gTyD95uuhTCBXYrnzGrsa4U/4J0cb+L3Za4eQUdwNaeXaIW0cV0/iLg6qxtF/DPC7dycEEj6OLgzEEWOegTKBgEjEgUBEwYYATo0Epu4QJ0UCAhEIb88ZmUMBA7lIEIlAEIk4EIlYEIhIEMfaJ2yFQvpAou46V97Xr5/BlECiX5K1NmfXg8uRVJlVBMJQIBXDiBCISN3dEsrAZ4wwykXick8cZUMxD4lDKBs+P4RxVCSiEIajrftOCHE4hCGMkUc/Mj/bJQyBbP3j2z04No631pY9Lg6PJMLasu5EHB5JtDVliYQikUTb0TLMNhwUyMgJVu128533gIE9xZ01uwCPTs7dJ1G2/1AFrz39umo2EQfh5pOIl4DiYGkgowFFn5mEwWu7S/ZAIFUgke/CwZa5QyAcGUiGnU0cCFcgMD8QEIc4YCwYEIgwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEjiA9DgVkXvBMGxAAAAAElFTkSuQmCC"/>
+    </pattern>
+    <path d="M0.0 0.0 L200.0 0.0 200.0 200.0 0.0 200.0 0.0 0.0" style="fill:url(#PatternID_2347_1)"/>
+  </g>
+</svg>

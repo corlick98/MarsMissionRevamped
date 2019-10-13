@@ -1,0 +1,2 @@
+gotoAndStop("loopstart");
+play();
