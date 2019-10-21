@@ -25,6 +25,7 @@ function BuildingStats(parent){
    this.maxWeaponPayload = 9999999;
    this.children = new Array();
    if(this.type == "BA_good" || this.type == "BA_evil" || this.type == "BK_good" || this.type == "BK_evil"){
+      //Bases
       this.max = 1;
       this.isHQ = true;
       this.width = 2;
@@ -42,6 +43,7 @@ function BuildingStats(parent){
       }
    }
    if(this.type == "BB_good" || this.type == "BB_evil"){
+      //Power PLant
       this.max = 8;
       this.width = 1;
       this.height = 2;
@@ -53,6 +55,7 @@ function BuildingStats(parent){
       this.children.push("UA_" + this.type.substr(3));
    }
    if(this.type == "BC_good" || this.type == "BC_evil"){
+      //Training Camp
       this.max = 2;
       this.width = 2;
       this.height = 2;
@@ -64,6 +67,7 @@ function BuildingStats(parent){
       this.children.push("UA_" + this.type.substr(3));
    }
    if(this.type == "BD_good" || this.type == "BD_evil"){
+      //Defense Station
       this.max = 12;
       this.width = 1;
       this.height = 2;
@@ -80,6 +84,7 @@ function BuildingStats(parent){
       this.rotatable = true;
    }
    if(this.type == "BE_good" || this.type == "BE_evil"){
+      //Vehicle Factory
       this.max = 2;
       this.width = 2;
       this.height = 3;
@@ -92,6 +97,7 @@ function BuildingStats(parent){
       this.children.push("UA_" + this.type.substr(3));
    }
    if(this.type == "BF_good" || this.type == "BF_evil"){
+      //Radar Station
       this.max = 1;
       this.width = 2;
       this.height = 3;
@@ -104,6 +110,7 @@ function BuildingStats(parent){
       this.children.push("UA_" + this.type.substr(3));
    }
    if(this.type == "BG_good" || this.type == "BG_evil"){
+      //Technology Station
       this.max = 1;
       this.width = 1;
       this.height = 2;
@@ -115,6 +122,7 @@ function BuildingStats(parent){
       this.children.push("UC_" + this.type.substr(3));
    }
    if(this.type == "BH_good" || this.type == "BH_evil"){
+      //Satellite Uplink
       this.max = 5;
       this.width = 1;
       this.height = 2;
@@ -149,6 +157,7 @@ function BuildingStats(parent){
       this.isHQ = true;
    }
    if(this.type == "BL_good"){
+      //Driller
       this.max = 4;
       this.width = 2;
       this.height = 3;

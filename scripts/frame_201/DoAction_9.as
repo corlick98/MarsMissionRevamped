@@ -34,6 +34,7 @@ function UnitStats(parent){
    this.carriable = false;
    this.disabled = false;
    if(this.type == "UA_good" || this.type == "UA_evil"){
+      //Infantry
       this.max = 5;
       this.home = this.parent.parent.findBuilding("BC_" + this.team,this.parent.team);
       this.threat = 3;
@@ -51,6 +52,7 @@ function UnitStats(parent){
       this.cost = 200;
    }
    if(this.type == "UB_good" || this.type == "UB_evil"){
+      //Engineer
       this.max = 5;
       this.home = this.parent.parent.findBuilding("BC_" + this.team,this.parent.team);
       this.threat = 5;
@@ -66,6 +68,7 @@ function UnitStats(parent){
       this.cost = 500;
    }
    if(this.type == "UC_good" || this.type == "UC_evil"){
+      //Jetpackers
       this.max = 5;
       this.home = this.parent.parent.findBuilding("BC_" + this.team,this.parent.team);
       if(this.type == "UC_evil" && this.parent.parent.findBuilding("BK_evil","evil"))
@@ -88,6 +91,7 @@ function UnitStats(parent){
       this.cost = 600;
    }
    if(this.type == "UD_good" || this.type == "UD_evil"){
+      //Miner
       this.max = 4;
       this.home = this.parent.parent.findBuilding("BA_" + this.team,this.parent.team);
       this.threat = 2;
@@ -102,6 +106,7 @@ function UnitStats(parent){
       this.cost = 1400;
    }
    if(this.type == "UE_good" || this.type == "UE_evil"){
+      //Trike
       this.max = 5;
       this.home = this.parent.parent.findBuilding("BE_" + this.team,this.parent.team);
       this.threat = 4;
@@ -116,6 +121,7 @@ function UnitStats(parent){
       this.cost = 600;
    }
    if(this.type == "UF_good" || this.type == "UF_evil"){
+      //Claw Tank
       this.max = 5;
       this.home = this.parent.parent.findBuilding("BE_" + this.team,this.parent.team);
       this.threat = 7;
@@ -130,6 +136,7 @@ function UnitStats(parent){
       this.cost = 1200;
    }
    if(this.type == "UG_good" || this.type == "UG_evil"){
+      //Astro Fighter
       this.max = 4;
       this.home = this.parent.parent.findBuilding("BF_" + this.team,this.parent.team);
       this.threat = 8;
